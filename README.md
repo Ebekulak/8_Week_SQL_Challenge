@@ -1,9 +1,12 @@
 # 8_Week_SQL_Challenge
-Case Study #1 - Danny’s Diner
-Case Study #2 - Pizza Runner
-Case Study #3 - Foodie-Fi
-Case Study #4 - Data Bank
-Case Study #5 - Data Mart
-Case Study #6 - Clique Bait
-Case Study #7 - Balanced Tree Clothing Co.
-Case Study #8 - Fresh Segments
+# Case Study #1 - Danny’s Diner
+# What is the total amount each customer spent at the restaurant?
+SELECT 
+	s.customer_id,
+	SUM(m.price) as total_spent
+FROM dannys_diner.sales AS s
+LEFT JOIN dannys_diner.menu as m
+ON m.product_id = s.product_id
+GROUP BY 1
+ORDER BY 2 desc;
+
