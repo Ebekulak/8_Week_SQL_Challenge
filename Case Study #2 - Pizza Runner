@@ -1,0 +1,5 @@
+Case Study #2 - Pizza Runner
+How many pizzas were ordered?
+SELECT 
+COUNT (pizza_id)
+FROM pizza_runner.customer_orders;
