@@ -1,4 +1,9 @@
-Case Study #2 - Pizza Runner
+# 🍕 Case Study #2 - Pizza Runner
+
+## 🍝 Solution - A. Pizza Metrics
+
+### How many pizzas were ordered?
+
 How many pizzas were ordered?
 SELECT 
 COUNT (pizza_id)
