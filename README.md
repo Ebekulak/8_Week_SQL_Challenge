@@ -10,7 +10,8 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 ### Table: customer_orders
 Looking at the `customer_orders` table below, The exclusions and extras columns will need to be cleaned up before using them
 <img width="1063" alt="image" src="https://user-images.githubusercontent.com/81607668/129472388-86e60221-7107-4751-983f-4ab9d9ce75f0.png">
-''''sql
+
+````sql
 UPDATE pizza_runner.customer_orders
 SET exclusions = NULL
 WHERE exclusions = 'null';
