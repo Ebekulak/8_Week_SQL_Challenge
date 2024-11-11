@@ -33,11 +33,10 @@ WHERE extras = '';
 UPDATE pizza_runner.customer_orders
 SET exclusions = TRIM(BOTH ' ' FROM REPLACE(exclusions, ', ', ','))
 WHERE exclusions IS NOT NULL;
-`````
-
 
 UPDATE pizza_runner.customer_orders
 SET extras = TRIM(BOTH ' ' FROM REPLACE(extras, ', ', ','))
 WHERE extras IS NOT NULL;
+`````
 
 After the SQL query, the cleaned and transformed table has become as follows.
