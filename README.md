@@ -10,3 +10,29 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 ### Table: customer_orders
 Looking at the `customer_orders` table below, The exclusions and extras columns will need to be cleaned up before using them
 <img width="1063" alt="image" src="https://user-images.githubusercontent.com/81607668/129472388-86e60221-7107-4751-983f-4ab9d9ce75f0.png">
+''''sql
+UPDATE pizza_runner.customer_orders
+SET exclusions = NULL
+WHERE exclusions = 'null';
+
+UPDATE pizza_runner.customer_orders
+SET extras = NULL
+WHERE extras = 'null';
+
+-- Step 2: Convert empty strings to NULLs
+UPDATE pizza_runner.customer_orders
+SET exclusions = NULL
+WHERE exclusions = '';
+
+UPDATE pizza_runner.customer_orders
+SET extras = NULL
+WHERE extras = '';
+
+-- Step 3: Remove spaces around commas in lists
+UPDATE pizza_runner.customer_orders
+SET exclusions = TRIM(BOTH ' ' FROM REPLACE(exclusions, ', ', ','))
+WHERE exclusions IS NOT NULL;
+
+UPDATE pizza_runner.customer_orders
+SET extras = TRIM(BOTH ' ' FROM REPLACE(extras, ', ', ','))
+WHERE extras IS NOT NULL;
