@@ -41,4 +41,4 @@ WHERE extras IS NOT NULL;
 
 After the SQL query, the cleaned and transformed table has become as follows.
 
-<img width="1058" alt="image" src="[https://user-images.githubusercontent.com/81607668/129472551-fe3d90a0-1e8b-4f32-a2a7-2ecd3ac469ef.png]">
+<img width="1058" alt="image" src="https://user-images.githubusercontent.com/81607668/129472551-fe3d90a0-1e8b-4f32-a2a7-2ecd3ac469ef.png">
