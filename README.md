@@ -41,4 +41,4 @@ WHERE extras IS NOT NULL;
 
 After the SQL query, the cleaned and transformed table has become as follows.
 
-![customers_users_image](https://C:\Users\nurte\Pictures\Screenshots\Ekran görüntüsü 2024-11-11 234535.png)
+![customers_users_image]([https://C:\Users\nurte\Pictures\Screenshots\Ekran görüntüsü 2024-11-11 234535.png](https://github.com/Ebekulak/8_Week_SQL_Challenge/blob/Case-Study-%232---Pizza-Runner/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-11-11%20234535.png))
