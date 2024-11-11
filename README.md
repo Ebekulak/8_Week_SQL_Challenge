@@ -40,3 +40,5 @@ WHERE extras IS NOT NULL;
 `````
 
 After the SQL query, the cleaned and transformed table has become as follows.
+
+![customers_users_image](https://C:\Users\nurte\Pictures\Screenshots\Ekran görüntüsü 2024-11-11 234535.png)
