@@ -39,6 +39,20 @@ SET extras = TRIM(BOTH ' ' FROM REPLACE(extras, ', ', ','))
 WHERE extras IS NOT NULL;
 `````
 
-After the SQL query, the cleaned and transformed table has become as follows.
+After the SQL query, the cleaned and transformed customer_orders table has become as follows.
 
 <img width="1058" alt="image" src="https://user-images.githubusercontent.com/81607668/129472551-fe3d90a0-1e8b-4f32-a2a7-2ecd3ac469ef.png">
+
+### Table: runner_orders
+````sql
+UPDATE pizza_runner.runner_orders
+	SET distance = REPLACE(distance,'km','');
+	
+UPDATE pizza_runner.runner_orders
+	SET duration = LEFT(duration,2);
+	
+UPDATE pizza_runner.runner_orders
+	SET cancellation = NULL
+	WHERE cancellation = ''
+````
+After the SQL query, the cleaned and transformed runner_orders table has become as follows.
