@@ -4,9 +4,9 @@
 
 ### How many pizzas were ordered?
 
-''''sql
+````sql
 How many pizzas were ordered?
 SELECT 
 COUNT (pizza_id)
 FROM pizza_runner.customer_orders;
-''''
+````
