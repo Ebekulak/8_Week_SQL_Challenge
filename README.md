@@ -56,4 +56,15 @@ UPDATE pizza_runner.runner_orders
 	WHERE cancellation = ''
 ````
 After the SQL query, the cleaned and transformed runner_orders table has become as follows.
+
 <img width="1058" alt="image" src="https://github.com/Ebekulak/8_Week_SQL_Challenge/blob/Case-Study-%232---Pizza-Runner/runner_orders.png">
+
+Click here for ..... to **A. Pizza Metrics**!
+
+
+
+
+
+
+
+
