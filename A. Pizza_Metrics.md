@@ -10,3 +10,5 @@ SELECT
 COUNT (pizza_id)
 FROM pizza_runner.customer_orders;
 ````
+Answer
+
