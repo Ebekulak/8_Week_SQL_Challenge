@@ -35,3 +35,62 @@ WHERE cancellation ISNULL
  ORDER BY 1;
 ````
 ![image](https://github.com/user-attachments/assets/0d0d67ce-6f2c-4d67-9443-53982706046d)
+
+### 4. How many of each type of pizza was delivered?
+
+````sql
+SELECT 
+	pn.pizza_name,	
+	COUNT(co.pizza_id)
+FROM pizza_runner.customer_orders AS co
+JOIN pizza_runner.runner_orders  AS ro 
+	ON ro.order_id = co.order_id
+JOIN pizza_runner.pizza_names AS pn 
+	ON pn.pizza_id = co.pizza_id
+WHERE ro.cancellation ISNULL
+GROUP BY 1;
+````
+![image](https://github.com/user-attachments/assets/87fc488f-d3c2-4d8b-9a5f-493eddcaeaa1)
+
+### 5. How many Vegetarian and Meatlovers were ordered by each customer?
+
+````sql
+SELECT  
+	co.customer_id,
+	pn.pizza_name,	
+	COUNT(co.pizza_id) AS ordered_pizza_count
+FROM pizza_runner.customer_orders AS co
+JOIN pizza_runner.pizza_names AS pn 
+	ON pn.pizza_id = co.pizza_id
+GROUP BY 1,2
+ORDER BY co.customer_id;
+````
+![image](https://github.com/user-attachments/assets/d14b8b69-a2f5-42b4-81eb-1468fd8065d2)
+
+### 6. What was the maximum number of pizzas delivered in a single order?
+
+````sql
+SELECT 
+	co.order_id,
+	COUNT (co.pizza_id) AS pizza_per_order
+FROM pizza_runner.customer_orders AS co
+JOIN pizza_runner.runner_orders  AS ro 
+	ON ro.order_id = co.order_id
+JOIN pizza_runner.pizza_names AS pn 
+	ON pn.pizza_id = co.pizza_id
+WHERE ro.cancellation ISNULL
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1;
+````
+![image](https://github.com/user-attachments/assets/7db7ebec-af84-42f9-b951-6b94177caefc)
+
+
+
+
+
+
+
+
+
+
