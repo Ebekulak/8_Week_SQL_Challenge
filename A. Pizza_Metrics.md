@@ -85,9 +85,32 @@ LIMIT 1;
 ````
 ![image](https://github.com/user-attachments/assets/7db7ebec-af84-42f9-b951-6b94177caefc)
 
+### 7. For each customer, how many delivered pizzas had at least 1 change and how many had no changes?
 
-
-
+````sql
+SELECT 
+	co.customer_id,
+	SUM (
+		CASE WHEN co.exclusions ISNULL AND co.extras ISNULL	THEN 1
+		ELSE 0
+		END
+		) AS no_change,	
+	SUM (
+		CASE WHEN co.exclusions IS NOT NULL OR co.extras IS NOT NULL
+		THEN 1
+		ELSE 0
+		END
+		) AS at_least_1_change
+FROM pizza_runner.customer_orders AS co
+JOIN pizza_runner.runner_orders  AS ro 
+	ON ro.order_id = co.order_id
+JOIN pizza_runner.pizza_names AS pn 
+	ON pn.pizza_id = co.pizza_id
+WHERE ro.cancellation ISNULL
+GROUP BY co.customer_id
+ORDER BY co.customer_id;
+````
+![image](https://github.com/user-attachments/assets/3a9fc73b-6b33-404e-a154-d2f78db3173f)
 
 
 
