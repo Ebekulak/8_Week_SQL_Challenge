@@ -112,8 +112,28 @@ ORDER BY co.customer_id;
 ````
 ![image](https://github.com/user-attachments/assets/3a9fc73b-6b33-404e-a154-d2f78db3173f)
 
+### 8. How many pizzas were delivered that had both exclusions and extras?
+````sql
+SELECT 
+	COUNT(pizza_id) AS pizza_had_excl_extras
+FROM pizza_runner.customer_orders AS co
+JOIN pizza_runner.runner_orders  AS ro 
+	ON ro.order_id = co.order_id
+WHERE ro.cancellation ISNULL AND
+co.exclusions IS NOT NULL AND 
+co.extras IS NOT NULL
+````
+![image](https://github.com/user-attachments/assets/f4b8d972-bda6-4ad3-b273-21f2c16fc806)
 
+### 9. What was the total volume of pizzas ordered for each hour of the day?
 
-
-
+````sql
+SELECT 
+	DATE_PART('hour', order_time) AS hour,
+	COUNT(order_id) AS order_count	
+FROM pizza_runner.customer_orders AS co
+GROUP BY DATE_PART('hour', order_time)
+ORDER BY hour
+````
+![image](https://github.com/user-attachments/assets/88fcb34b-b20c-43ae-a5af-4811c7c85e38)
 
