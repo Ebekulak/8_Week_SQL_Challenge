@@ -137,3 +137,13 @@ ORDER BY hour
 ````
 ![image](https://github.com/user-attachments/assets/88fcb34b-b20c-43ae-a5af-4811c7c85e38)
 
+### 10. What was the volume of orders for each day of the week?
+
+````sql
+SELECT 
+	DATE_PART('day', order_time) AS day_orders,
+	COUNT(order_id) AS order_count	
+FROM pizza_runner.customer_orders AS co
+GROUP BY DATE_PART('day', order_time)
+ORDER BY day
+````
