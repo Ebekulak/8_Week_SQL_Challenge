@@ -149,4 +149,4 @@ ORDER BY day
 ````
 ![image](https://github.com/user-attachments/assets/aba8c4ed-69f2-4e9c-b1b8-1f3ff25f054b)
 
-***Click [here] B. Runner and Customer Experience.md for solution for B. Runner and Customer Experience!***
+***Click [here](https://github.com/Ebekulak/8_Week_SQL_Challenge/blob/6088638a073202fd132d4ea9d46beb3dab40a780/B.%20Runner%20and%20Customer%20Experience.md) for solution for B. Runner and Customer Experience!***
