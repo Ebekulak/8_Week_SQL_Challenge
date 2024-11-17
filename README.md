@@ -57,9 +57,9 @@ UPDATE pizza_runner.runner_orders
 ````
 After the SQL query, the cleaned and transformed runner_orders table has become as follows.
 
-<img width="1058" alt="image" src="https://github.com/Ebekulak/8_Week_SQL_Challenge/blob/Case-Study-%232---Pizza-Runner/runner_orders.png">
+![image](https://github.com/user-attachments/assets/396a7676-8c5b-4514-82c5-bda55430a4c3)
 
-Click here for ..... to **A. Pizza Metrics**!
+Click [here](https://github.com/Ebekulak/8_Week_SQL_Challenge/blob/6088638a073202fd132d4ea9d46beb3dab40a780/A.%20Pizza_Metrics.md) for to **A. Pizza Metrics**!
 
 
 
