@@ -147,3 +147,6 @@ FROM pizza_runner.customer_orders AS co
 GROUP BY DATE_PART('day', order_time)
 ORDER BY day
 ````
+![image](https://github.com/user-attachments/assets/aba8c4ed-69f2-4e9c-b1b8-1f3ff25f054b)
+
+***Click [here](https://github.com/katiehuangx/8-Week-SQL-Challenge/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/B.%20Runner%20and%20Customer%20Experience.md) for solution for B. Runner and Customer Experience!***
