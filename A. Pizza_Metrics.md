@@ -12,7 +12,8 @@ FROM pizza_runner.customer_orders;
 ````
 #### Answer
 
-![order_count](https://github.com/Ebekulak/images/blob/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-11-13%20224911.png)
+![image](https://github.com/user-attachments/assets/127de315-2440-4592-ba75-b0ca8df0ddd5)
+
 
 ### 2. How many unique customer orders were made?
 
@@ -21,7 +22,7 @@ SELECT
 COUNT (DISTINCT(order_id)) AS unique_orders_count
 FROM pizza_runner.customer_orders;
 ````
-![order_count](https://github.com/Ebekulak/images/blob/main/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202024-11-13%20235349.png?raw=true)
+![image](https://github.com/user-attachments/assets/97e5b3d3-b980-4c40-b19f-4e902b9be4e6)
 
 ### 3. How many successful orders were delivered by each runner?
 
